@@ -1,0 +1,6 @@
+<div class="form-response-holder<% if @fill: %> fill<% else if @fixed: %> fixed<% end %>">
+  <div class='form-response <%= @response_class %>'>
+    <i class="<%= @icon_class %>" form-response-icon></i> 
+    <div class='msg'></div>
+  </div>
+</div>

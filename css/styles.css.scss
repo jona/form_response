@@ -1,0 +1,19 @@
+@import "mixins";
+
+//RESPONSE
+.form-response-holder{position:absolute; left:0; z-index: 2; width:100%;}
+.form-response-holder.fill{background: rgba(255,255,255,0.6);}
+.form-response-holder.fixed{background: rgba(255,255,255,0.8); position:fixed; top:0; left:0; width:100%; z-index: 3000;}
+.form-response-holder.fixed .form-response{margin:68px 40px;}
+.form-response{padding:15px 10px; text-align:center; @include border-radius(3px); overflow:hidden; @include opacity(0); @include transform(scale(.5)); display:none; @include single-box-shadow(rgba(0, 0, 0, 0.05), 0, 1px, 3px);}
+.form-response .msg{font-size:20px;}
+.form-response .msg p{margin:0; font-size:14px; line-height:20px;}
+.form-response i{font-size:30px;}
+.form-response.pending{background: #FFF; border: 1px solid #DDD;}
+.form-response.pending i{color:#ddd;}
+.form-response.warning{background: #FFFEF2; border: 1px solid #EEE500;}
+.form-response.warning i{color:#EEE500;}
+.form-response.complete{background: #F0FFE7; border: 1px solid #5CB85E;}
+.form-response.complete i{color:#5CB85E;}
+.form-response.error{background: #FFF4F4; color: #CF2121; border: 1px solid #EE9191;}
+.form-response.show{-webkit-animation: bounce 0.2s ease-out; @include opacity(1); @include transform(scale(1)); }
